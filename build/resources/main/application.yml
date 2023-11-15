@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://cornelius.db.elephantsql.com:5432/jhclpmmv
+    username: jhclpmmv
+    password: lUIPoS43iVf8QLbmEqRosowaQq263S33
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    locations: classpath:db/migration
+    enabled: true
+    baseline-on-migrate: true
+
+mapping:
+  host: http://localhost:8080
+  length: 6
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.flywaydb: DEBUG
